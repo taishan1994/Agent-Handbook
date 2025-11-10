@@ -1,0 +1,6 @@
+# Core dependencies for PocketFlow tracing
+langfuse>=2.0.0,<3.0.0  # v2 low level SDK compatible with Langfuse servers
+python-dotenv>=1.0.0
+
+# Optional dependencies for enhanced functionality
+pydantic>=2.0.0  # For data validation and serialization

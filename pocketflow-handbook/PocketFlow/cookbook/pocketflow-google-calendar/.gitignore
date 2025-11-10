@@ -1,0 +1,4 @@
+.env
+Pipfile.lock
+credentials.json
+token.pickle
