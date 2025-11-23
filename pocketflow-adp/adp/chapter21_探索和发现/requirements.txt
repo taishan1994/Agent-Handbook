@@ -1,0 +1,7 @@
+pocketflow>=0.1.0
+asyncio
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+tqdm>=4.65.0
+concurrent.futures

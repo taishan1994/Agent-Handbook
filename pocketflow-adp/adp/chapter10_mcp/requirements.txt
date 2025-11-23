@@ -1,0 +1,27 @@
+# PocketFlow MCP示例依赖项
+
+# PocketFlow框架
+# 注意：PocketFlow可能需要本地安装，请根据实际情况调整路径
+
+# MCP相关
+mcp>=1.0.0
+fastmcp>=0.1.0
+
+# OpenAI API客户端
+openai>=1.0.0
+
+# 异步支持
+asyncio
+
+# YAML解析
+PyYAML>=6.0
+
+# 网络搜索
+requests>=2.25.0
+beautifulsoup4>=4.9.0
+
+# 其他工具
+pathlib
+typing
+
+fastmcp==2.13.0.2

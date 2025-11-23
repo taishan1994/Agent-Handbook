@@ -1,0 +1,19 @@
+<!-- PocketFlow Chatbot - Start -->
+<script>
+(function() {
+    var script = document.createElement("script");
+    script.src = "https://askthispage.com/embed/chatbot.js";
+    script.onload = function() {
+        initializeChatbot({
+            extra_urls: ["https://github.com/The-Pocket/PocketFlow/blob/main/.cursorrules"],
+            prefixes: ["https://github.com/The-Pocket","https://the-pocket.github.io/"],
+            chatbotName: 'PocketFlow Website Chatbot',
+            wsUrl: 'wss://askthispage.com/api/ws/chat',
+            instruction: '',
+            isOpen: false
+        });
+    };
+    document.head.appendChild(script);
+})();
+</script>
+<!-- PocketFlow Chatbot - End -->

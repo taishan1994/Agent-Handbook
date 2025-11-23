@@ -16,7 +16,7 @@ def call_llm(prompt):
     # return r.choices[0].message.content
     client = OpenAI(
         # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
-        api_key="sk-c083635aa07d4753a83d481b97e4824c",
+        api_key="",
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
     )
     if isinstance(prompt, str):
