@@ -1,0 +1,58 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Ruby
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build output (如果需要生成 HTML 或 PDF)
+build/
+dist/
+output/
+
+# Node modules (如果使用 gitbook 等工具)
+node_modules/
+package-lock.json
+
+# Python (如果使用 mkdocs 等工具)
+__pycache__/
+*.py[cod]
+venv/
+.env
