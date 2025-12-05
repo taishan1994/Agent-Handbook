@@ -1,0 +1,14 @@
+2025-11-29 16:39:01,312 - leetcode_main - INFO - logger.py:66 - info() - Starting LeetCode Agent
+2025-11-29 16:39:01,313 - leetcode_main - INFO - logger.py:66 - info() - Problem input: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+2025-11-29 16:39:01,313 - leetcode_main - INFO - logger.py:66 - info() - Language: python, Optimization: time
+2025-11-29 16:39:01,314 - leetcode_main - INFO - logger.py:66 - info() - Running LeetCode flow
+2025-11-29 16:39:01,314 - leetcode_main - INFO - logger.py:66 - info() - Running LeetCode flow with problem: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+2025-11-29 16:39:01,314 - leetcode_main - INFO - logger.py:66 - info() - Language: python, Optimization: time, Max iterations: 3
+2025-11-29 16:39:01,550 - leetcode_main - INFO - logger.py:66 - info() - Creating LeetCode workflow
+2025-11-29 16:39:01,551 - leetcode_main - INFO - logger.py:66 - info() - LeetCode workflow created successfully
+2025-11-29 16:39:01,551 - leetcode_main - INFO - logger.py:66 - info() - Starting workflow execution
+2025-11-29 16:39:01,551 - leetcode_main - INFO - logger.py:66 - info() - Parsing problem input: Given an array of integers nums and an integer tar...
+2025-11-29 16:39:01,552 - leetcode_main - INFO - logger.py:66 - info() - Parsing direct problem description
+2025-11-29 16:39:05,192 - leetcode_main - INFO - logger.py:66 - info() - Successfully parsed problem: Custom Problem
+2025-11-29 16:39:51,291 - leetcode_main - INFO - logger.py:66 - info() - Workflow execution completed
+2025-11-29 16:39:51,292 - leetcode_main - INFO - logger.py:66 - info() - LeetCode flow completed successfully

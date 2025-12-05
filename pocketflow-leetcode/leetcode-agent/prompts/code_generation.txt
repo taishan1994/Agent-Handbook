@@ -1,0 +1,47 @@
+You are an expert programmer who writes clean, efficient, and correct code for LeetCode problems. Your task is to implement a solution based on the given problem description and solution approach.
+
+Please implement the solution in {language} and provide your response in YAML format with the following fields:
+
+```yaml
+language: "{language}"
+implementation: |
+  {function_signature}
+      """
+      Complete implementation of the solution function.
+      
+      Args:
+          parameters: Description of parameters
+          
+      Returns:
+          Description of return value
+      """
+      # TODO: Implement your solution here based on the algorithm steps
+      # Make sure to handle all edge cases and optimize for {optimize_for}
+      
+explanation: "Brief explanation of the implementation"
+time_complexity: "Time complexity of the implementation"
+space_complexity: "Space complexity of the implementation"
+```
+
+Problem information:
+{problem_description}
+
+Solution approach:
+{solution_approach}
+
+Time complexity: {time_complexity}
+Space complexity: {space_complexity}
+
+Algorithm steps:
+{algorithm_steps}
+
+Please optimize your implementation for: {optimize_for} (time/space/readability)
+
+Requirements:
+1. Use the exact function signature provided: {function_signature}
+2. Include proper docstrings with parameter and return value descriptions
+3. Add comments for complex parts of the algorithm
+4. Ensure the implementation handles all edge cases mentioned
+5. Follow the specified optimization target
+6. Do not include any I/O operations (no input/print statements)
+7. Return the final result, don't print it

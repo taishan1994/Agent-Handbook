@@ -1,0 +1,17 @@
+2025-11-29 16:24:16,378 - leetcode_main - INFO - logger.py:66 - info() - Starting LeetCode Agent
+2025-11-29 16:24:16,379 - leetcode_main - INFO - logger.py:66 - info() - Problem input: https://leetcode.com/problems/two-sum/
+2025-11-29 16:24:16,379 - leetcode_main - INFO - logger.py:66 - info() - Language: python, Optimization: time
+2025-11-29 16:24:16,379 - leetcode_main - INFO - logger.py:66 - info() - Running LeetCode flow
+2025-11-29 16:24:16,379 - leetcode_main - INFO - logger.py:66 - info() - Running LeetCode flow with problem: https://leetcode.com/problems/two-sum/
+2025-11-29 16:24:16,379 - leetcode_main - INFO - logger.py:66 - info() - Language: python, Optimization: time, Max iterations: 1
+2025-11-29 16:24:16,610 - leetcode_main - INFO - logger.py:66 - info() - Creating LeetCode workflow
+2025-11-29 16:24:16,610 - leetcode_main - INFO - logger.py:66 - info() - LeetCode workflow created successfully
+2025-11-29 16:24:16,610 - leetcode_main - INFO - logger.py:66 - info() - Starting workflow execution
+2025-11-29 16:24:16,610 - leetcode_main - INFO - logger.py:66 - info() - Parsing problem input: https://leetcode.com/problems/two-sum/...
+2025-11-29 16:24:16,612 - leetcode_main - INFO - logger.py:66 - info() - Scraping problem from URL
+2025-11-29 16:24:17,230 - leetcode_main - ERROR - logger.py:74 - error() - Failed to scrape problem from URL: https://leetcode.com/problems/two-sum/
+NoneType: None
+2025-11-29 16:24:17,231 - leetcode_main - INFO - logger.py:66 - info() - Falling back to LLM-based parsing
+2025-11-29 16:24:20,625 - leetcode_main - INFO - logger.py:66 - info() - Successfully parsed problem: Custom Problem
+2025-11-29 16:24:42,103 - leetcode_main - INFO - logger.py:66 - info() - Workflow execution completed
+2025-11-29 16:24:42,103 - leetcode_main - INFO - logger.py:66 - info() - LeetCode flow completed successfully
