@@ -1,0 +1,4 @@
+2025-12-07 09:09:38,935 - leetcode_flow - INFO - /nfs/FM/gongoubo/new_project/Agent-Handbook/pocketflow-leetcode/Leetcode_Agent/flow.py:26 - create_leetcode_flow() - Creating LeetCode workflow
+2025-12-07 09:09:39,129 - leetcode_flow - INFO - /nfs/FM/gongoubo/new_project/Agent-Handbook/pocketflow-leetcode/Leetcode_Agent/nodes/user_input_node.py:43 - prep() - leetcode_url：https://leetcode.cn/problems/trapping-rain-water
+2025-12-07 09:09:39,129 - leetcode_flow - INFO - /nfs/FM/gongoubo/new_project/Agent-Handbook/pocketflow-leetcode/Leetcode_Agent/nodes/user_input_node.py:44 - prep() - language_preference:python3
+2025-12-07 09:09:39,129 - leetcode_flow - INFO - /nfs/FM/gongoubo/new_project/Agent-Handbook/pocketflow-leetcode/Leetcode_Agent/nodes/user_input_node.py:45 - prep() - max_iterations:3
