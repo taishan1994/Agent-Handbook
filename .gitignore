@@ -1,0 +1,2 @@
+# Auto ignored large leaf directories (>20MB)
+pocketflow-law-rag/Law_RAG_Agent/database/index/

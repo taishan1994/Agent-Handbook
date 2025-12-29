@@ -47,9 +47,11 @@ if __name__ == "__main__":
 
     # https://leetcode.cn/problems/trapping-rain-water
     # https://leetcode.com/problems/two-sum/
+    # https://leetcode.cn/problems/n-queens/
+    # https://leetcode.cn/problems/sliding-window-maximum/
 
     shared = {
-        "leetcode_url": "https://leetcode.cn/problems/sliding-window-maximum/",
+        "leetcode_url": "https://leetcode.cn/problems/n-queens/",
         "language_preference": "python3",
         "max_iterations": 5,
     }
