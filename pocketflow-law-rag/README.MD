@@ -8,7 +8,7 @@ rm -rf Laws
 git clone https://github.com/LawRefBook/Laws.git
 
 # 生成知识库所需要的输入数据
-cd utils && python process_law_data.py`
+cd utils && python process_law_data.py
 
 # 修改utils/llm_utils.py里面的服务为自己部署的服务
 # 这里面使用Qwen3模型以及Qwen3-4B-Embedding，使用vllm或者sglang进行部署

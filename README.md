@@ -5,6 +5,23 @@ Agent学习笔记。
 - pocketflow-adp：基于google的书籍《agentic-design-patterns》，使用pocketflow实现书中不同章节的代码。
 - pocketflow-leetcode：构建一个可以自动写leetcode和测试i的智能体。
 - anthropic-article：学习anthropic发布的有关智能体的文章。
+- pocketflow-law-tag-agent：一个基础的RAG框架，后续优化方法可以基于这个框架进行尝试。
+
+# 配套文章
+
+- [一份全面的Agent学习资料，看完了我不信你还不会](https://mp.weixin.qq.com/s/acJA87ciZqxXh07y5cf8Bg)
+- [从零开始构建一个会写leetcode的Agent](https://mp.weixin.qq.com/s/CONB6qRcgYD_RhXzMS_eqw)
+- [终于弄懂了提示词，提示工程和上下文工程](https://mp.weixin.qq.com/s/iAR5EuMqYpMU-BRK3nNjqQ)
+- [25种LLM部署框架你知道多少？](https://mp.weixin.qq.com/s/XEOFUt7wXZm7ZtDcVDls2A)
+- [Agent评测之使用opencompass评测大模型的基础能力](https://mp.weixin.qq.com/s/I3s3Fei0wA-TsRnpSogDtQ)
+- [Agent评测之使用大海捞针评估大模型的上下文长度](https://mp.weixin.qq.com/s/QSQDkLI0xECZeE0yHJiQjQ)
+- [基于大语言模型的智能体优化综述](https://mp.weixin.qq.com/s/FZl2l47TQ98U53MLZA4z6Q)
+- [基于大语言模型的智能体评估综述](https://mp.weixin.qq.com/s/YalQ1xrfpMRKPZUeFrvnag)
+- [【search-o1】大模型的推理](https://mp.weixin.qq.com/s/ISE2k87aiBi4i67wXH1how)
+- [【search-o1】利用RAG进行检索问答](https://mp.weixin.qq.com/s/Eucfjn99wDpcmFmACgywUQ)
+- [【search-o1】利用Agent结合搜索引擎进行问答](https://mp.weixin.qq.com/s/MHc3BdigVvd-oW3Szm2zrQ?poc_token=HJWiz2ijBMxKCEMq2xkCyo8jRJap4chTd0k5vHct)
+- [【search-o1】使用search-o1方法进行智能检索问答](https://mp.weixin.qq.com/s/Um6NKMtypvF2cq7-D_Ya1A)
+- [mini-langchain-chatglm：五分钟实现基于知识的问答](https://mp.weixin.qq.com/s/8qUv2XIzeK36RO9QEUJA3A)
 
 # Agent框架对比
 **主流 AI Agent 框架优缺点对比（截至 2025 年 11 月）**
