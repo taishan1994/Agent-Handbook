@@ -207,9 +207,10 @@ async def main():
     )
     
     # 2. 准备工具
+    workspace_dir = "./my_workspace"
     tools = [
-        ReadTool(),
-        WriteTool()
+        ReadTool(workspace_dir=workspace_dir),
+        WriteTool(workspace_dir=workspace_dir)
     ]
     
     # 3. 创建Agent实例
@@ -218,7 +219,7 @@ async def main():
         system_prompt="你是一个文件操作助手，可以帮助用户读取和写入文件。",
         tools=tools,
         max_steps=50,
-        workspace_dir="./my_workspace",
+        workspace_dir=workspace_dir,
         token_limit=80000
     )
     
