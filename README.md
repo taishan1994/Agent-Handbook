@@ -7,6 +7,7 @@ Agent学习笔记。
 - anthropic-article：学习anthropic发布的有关智能体的文章。
 - pocketflow-law-tag-agent：一个基础的RAG框架，后续优化方法可以基于这个框架进行尝试。
 - mini-agents：对Minimax的Mini-Agents进行拆解，包括工具的使用、mcp的使用、skills的使用以及构建一个可以执行工具、mcp和skills的agent。
+- langchain_v1+：主要是对langchain1.+的学习。
 
 # 配套文章
 
