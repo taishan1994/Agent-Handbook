@@ -47,7 +47,9 @@ CUDA_VISIBLE_DEVICES=0 vllm serve Qwen/Qwen3-30B-A3B-Instruct-2507--host 0.0.0.0
 
 ## 构建一个tavily的mcp服务
 注册并申请一个api key：https://app.tavily.com/home 
+
 langchain中如何使用可以参考这里： https://docs.tavily.com/documentation/integrations/langchain
+
 travily的接口文档参考这里：https://docs.tavily.com/documentation/api-reference/endpoint/search
 
 我们可以使用langchain内置的travily工具，也可以自己用fastmcp来封装一个mcp，为了能够让以后我们能够自定义各种mcp，我们这里自定义一个travli mcp：
@@ -103,8 +105,15 @@ model = init_chat_model(
 将agent分装为fastapi（可使用openai格式调用），然后构建了一个简单的可视化页面来调用该api。
 
 启动服务端：`python agent_apt.py`
+
 访问：http://192.168.16.24:8080/web_demo.html
 
+![image-20260128173554843](./deepagents_with_mcp.assets/image-20260128173554843.png)
+
+会流式输出相关的tolist、相关工具的调用信息、llm的总结。
 
 # 代码参考
+
+部分代码参考：
+
 > https://mp.weixin.qq.com/s/F4dDJIe_Qj-yJD8WDogHEQ
