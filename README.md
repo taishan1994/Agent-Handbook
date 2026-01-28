@@ -2,12 +2,73 @@
 Agent学习笔记。
 
 - pocketflow-handbook：使用Pocketflow的官方仓库及示例，构建基础的学习课程。基本上如果对pocketflow比较了解了，后续再去学习langchain或者langgraph等其它的框架就会更简单。
+
 - pocketflow-adp：基于google的书籍《agentic-design-patterns》，使用pocketflow实现书中不同章节的代码。
+
+  - [Chapter 1: 提示词链](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter1_提示词链) - 学习如何将复杂任务分解为多个顺序执行的子任务，每个子任务通过专门的提示词处理，前一个任务的输出作为后一个任务的输入。实现技术规格提取、JSON转换和格式验证等功能。
+
+  - [Chapter 2: 路由](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter2_路由) - 掌握路由模式，使Agent能够根据输入内容动态决定执行路径。包含基于LLM、嵌入相似度和混合路由三种策略，实现预订处理、信息查询等功能。
+
+  - [Chapter 3: 并行化](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter3_并行化) - 学习如何通过并发执行独立任务来提高效率。使用AsyncParallelBatchNode实现并行处理，适用于多个LLM调用或外部API请求的场景。
+
+  - [Chapter 4: 反思](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter4_反思) - 实现反思模式，让AI系统能够自我评估和改进其输出。通过生成、评估和优化的迭代过程逐步提升最终结果质量。
+
+  - [Chapter 5: 工具调用](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter5_工具调用) - 学习工具使用模式，允许Agent调用外部工具来获取信息或执行操作。包含信息搜索、股票价格查询、财务分析等实际应用场景。
+
+  - [Chapter 6: 规划](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter6_规划) - 实现规划模式，将复杂任务分解为多个步骤并按顺序执行。包含规划节点、执行节点和响应生成节点，支持动态规划和工具集成。
+
+  - [Chapter 7: 多智能体协作](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter7_多智能体协作) - 学习多智能体协作模式，通过设计多个专门智能体的协作集合解决复杂、多领域任务。包含顺序协作、并行协作、层级协作和协作决策四种模式。
+
+  - [Chapter 8: 记忆管理](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter8_记忆管理) - 实现Agent的记忆管理功能，包括短期记忆（上下文记忆）和长期记忆（持久记忆）。使用SessionService和MemoryService管理会话和记忆存储。
+
+  - [Chapter 9: 学习和适应](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter9_学习和适应) - 学习多种学习和适应模式，包括强化学习、监督学习、自我进化和自适应智能体。使用PocketFlow框架实现模块化的学习节点。
+
+  - [Chapter 10: MCP](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter10_mcp) - 实现模型上下文协议(MCP)，允许AI模型与外部工具和服务进行交互。包含文件系统交互、Web搜索和文件内容分析功能。
+
+  - [Chapter 11: 目标设定和监控](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter11_目标设定和监控) - 实现目标设定和监控模式，通过迭代式代码生成、评估和改进来满足用户定义的目标。包含目标设定、代码生成、代码评估和代码改进节点。
+
+  - [Chapter 12: 异常处理和恢复](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter12_异常处理和恢复) - 学习异常处理和恢复模式，构建能够优雅处理错误并从失败中恢复的智能系统。包含主要处理器、回退处理器和响应代理三个组件。
+
+  - [Chapter 13: 人机协同](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter13_人机协同) - 实现人机协同模式，将人类智能与人工智能相结合。系统在处理复杂任务时自动决策，并在需要时寻求人类干预。
+
+  - [Chapter 14: RAG](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter14_rag) - 实现检索增强生成(RAG)系统，结合文档检索和LLM生成能力。支持基于Web搜索和向量相似度的文档检索，包含基础RAG和智能RAG两种流程。
+
+  - [Chapter 15: Agent间通信](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter15_agent_communication) - 学习Agent间通信(A2A)协议，使多个Agent能够相互发现、通信和协作。包含AgentCard、A2A通信节点、Agent注册表等核心组件。
+
+  - [Chapter 16: 资源感知优化](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter16_资源感知优化) - 实现资源感知优化系统，根据任务复杂性和资源约束动态选择合适的模型和策略。包含任务分类、资源监控和优化建议功能。
+
+  - [Chapter 17: 推理技术](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter17_推理技术) - 学习多种高级推理技术，包括思维链(CoT)、自我纠正、ReAct、辩论链(CoD)和Deep Research。每种技术都有其适用的场景和优势。
+
+  - [Chapter 18: 防护栏安全模式](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter18_防护栏安全模式) - 实现AI Agent的防护栏和安全模式，确保AI系统安全、可靠且符合道德规范地运行。包含输入验证、输出过滤、工具调用防护栏和错误处理等功能。
+
+  - [Chapter 19: 评估与监控](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter19_评估与监控) - 评估与监控模块（代码存在但README文件缺失）
+
+  - [Chapter 20: 优先级排序](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter20_优先级排序) - 实现任务优先级排序系统，根据任务的重要性和紧急性自动分配优先级，并将任务分配给合适的工作人员。支持自然语言命令和多种查询方式。
+
+  - [Chapter 21: 探索和发现](https://github.com/taishan1994/Agent-Handbook/tree/main/pocketflow-adp/adp/chapter21_探索和发现) - 探索和发现模式，通过Agent实验室进行实验和研究，生成优化建议、模型架构、数据解决方案和文献综述。
+
 - pocketflow-leetcode：构建一个可以自动写leetcode和测试i的智能体。
+
+  - [构建一个自动编写leecode的智能体](https://github.com/taishan1994/Agent-Handbook/blob/main/pocketflow-leetcode/README.MD)
+
 - anthropic-article：学习anthropic发布的有关智能体的文章。
+
 - pocketflow-law-tag-agent：一个基础的RAG框架，后续优化方法可以基于这个框架进行尝试。
+
+  - [构建一个能够进行检索增强生成的法律问答智能体](https://github.com/taishan1994/Agent-Handbook/blob/main/pocketflow-law-rag/README.MD)
+
 - mini-agents：对Minimax的Mini-Agents进行拆解，包括工具的使用、mcp的使用、skills的使用以及构建一个可以执行工具、mcp和skills的agent。
+
+  - [构建一个LLM客户端](https://github.com/taishan1994/Agent-Handbook/blob/main/mini-agents/examples/test_llm_client.py)
+  - [构建一个可以使用工具的LLM客户端](https://github.com/taishan1994/Agent-Handbook/blob/main/mini-agents/examples/test_llm_client_with_tool.py)
+  - [构建一个可以使用mcp工具的LLM客户端](https://github.com/taishan1994/Agent-Handbook/blob/main/mini-agents/examples/test_llm_client_with_mcp_tools.py)
+  - [构建一个可以使用skills工具的LLM客户端](https://github.com/taishan1994/Agent-Handbook/blob/main/mini-agents/examples/test_llm_skill_code_execution.py)
+
 - langchain_v1+：主要是对langchain1.+的学习。
+
+  - [如何自定义中间件](https://github.com/taishan1994/Agent-Handbook/blob/main/langchain_v1%2B/examples/%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
+  - [使用langchain1.x+vllm+Qwen3-30B-A3B结合MCP构建一个自动搜索回答的智能体](https://github.com/taishan1994/Agent-Handbook/blob/main/langchain_v1%2B/examples/deepagents_with_mcp.md)
+
 
 # 配套文章
 
