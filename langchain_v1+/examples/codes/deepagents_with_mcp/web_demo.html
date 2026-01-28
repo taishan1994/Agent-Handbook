@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent API 流式输出演示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .input-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .input-wrapper {
+            flex: 1;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-width: 120px;
+            height: 50px;
+        }
+
+        .send-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .send-button:active {
+            transform: translateY(0);
+        }
+
+        .send-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .output-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            min-height: 400px;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .output-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .status-badge.idle {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .status-badge.loading {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-badge.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .output-content {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output-content .todo-header {
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .output-content .todo-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #28a745;
+        }
+
+        .output-content .tool-call {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e7f3ff;
+            border-radius: 6px;
+            border-left: 3px solid #6f42c1;
+            font-size: 14px;
+        }
+
+        .output-content .tool-success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .clear-button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .clear-button:hover {
+            background: #c82333;
+        }
+
+        @media (max-width: 768px) {
+            .input-group {
+                flex-direction: column;
+            }
+
+            .send-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Agent API 流式输出演示</h1>
+            <p>输入您的问题，实时查看 AI Agent 的思考过程和回答</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="请输入您的问题，例如：埃菲尔铁塔与最高建筑相比有多高？"
+                    ></textarea>
+                </div>
+                <button class="send-button" id="sendButton" onclick="sendMessage()">
+                    发送
+                </button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-header">
+                <div class="output-title">💬 对话输出</div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <span class="status-badge idle" id="statusBadge">等待输入</span>
+                    <button class="clear-button" onclick="clearOutput()">清空</button>
+                </div>
+            </div>
+            <div class="output-content" id="outputContent">
+                <p style="color: #999; text-align: center; padding: 40px;">
+                    等待输入... 请在上方输入框中输入您的问题
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = window.location.protocol + '//' + window.location.hostname + ':8000/v1/chat/completions';
+        const MODEL = 'agent-model';
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+            const statusBadge = document.getElementById('statusBadge');
+            const outputContent = document.getElementById('outputContent');
+
+            const message = userInput.value.trim();
+            if (!message) {
+                alert('请输入您的问题！');
+                return;
+            }
+
+            sendButton.disabled = true;
+            sendButton.textContent = '发送中...';
+            statusBadge.className = 'status-badge loading';
+            statusBadge.textContent = '处理中';
+            outputContent.innerHTML = '';
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: MODEL,
+                        messages: [
+                            { role: 'user', content: message }
+                        ],
+                        stream: true
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop() || '';
+
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const data = line.slice(6);
+                            if (data.trim() === '[DONE]') {
+                                statusBadge.className = 'status-badge success';
+                                statusBadge.textContent = '完成';
+                                break;
+                            }
+
+                            try {
+                                const json = JSON.parse(data);
+                                const content = json.choices?.[0]?.delta?.content || '';
+                                if (content) {
+                                    appendContent(content);
+                                }
+                            } catch (e) {
+                                console.error('Error parsing JSON:', e);
+                            }
+                        }
+                    }
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                statusBadge.className = 'status-badge error';
+                statusBadge.textContent = '错误';
+                outputContent.innerHTML += `<p style="color: #dc3545; padding: 20px;">❌ 发生错误: ${error.message}</p>`;
+            } finally {
+                sendButton.disabled = false;
+                sendButton.textContent = '发送';
+            }
+        }
+
+        function appendContent(content) {
+            const outputContent = document.getElementById('outputContent');
+            
+            if (outputContent.querySelector('p')?.textContent.includes('等待输入')) {
+                outputContent.innerHTML = '';
+            }
+
+            outputContent.innerHTML += content;
+            outputContent.scrollTop = outputContent.scrollHeight;
+        }
+
+        function clearOutput() {
+            document.getElementById('outputContent').innerHTML = `
+                <p style="color: #999; text-align: center; padding: 40px;">
+                    等待输入... 请在上方输入框中输入您的问题
+                </p>
+            `;
+            document.getElementById('statusBadge').className = 'status-badge idle';
+            document.getElementById('statusBadge').textContent = '等待输入';
+            document.getElementById('userInput').value = '';
+        }
+
+        document.getElementById('userInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
