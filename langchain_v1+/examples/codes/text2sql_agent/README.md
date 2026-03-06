@@ -1,5 +1,3 @@
-# Text2SQL Agent - 结合Skills的数据库查询Agent
-
 这是一个使用deepagents框架结合Skills功能的Text2SQL Agent，能够理解用户的自然语言查询，生成正确的SQL语句，执行查询并返回结果。
 
 ## 功能特点
@@ -29,8 +27,7 @@ text2sql_agent/
 ### 1. 安装依赖
 
 ```bash
-cd /nfs/FM/gongoubo/new_project/Agent-Handbook/langchain_v1+/examples/codes/deepagents_with_mcp
-pip install -r requirements.txt
+bash install.sh
 ```
 
 ### 2. 下载数据库
@@ -38,7 +35,7 @@ pip install -r requirements.txt
 数据库已经存在于 `data/chinook.db`，如果需要重新下载：
 
 ```bash
-cd /nfs/FM/gongoubo/new_project/Agent-Handbook/langchain_v1+/examples/codes/text2sql_agent
+cd /nfs/FM/gongoubo/new_project/Agent-Handbook/langchain_v1+/examples/codes/text2sql_agent/data
 curl -L -o data/chinook.db https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite
 ```
 
@@ -175,38 +172,6 @@ Agent提供以下数据库工具：
 4. **get_sample_data**: 获取表的样本数据
    - 参数: table_name (表名), limit (样本行数)
    - 返回: 表的样本数据
-
-## SQL技能
-
-SQL技能 (`skills/sql-query/SKILL.md`) 提供了：
-
-- 完整的数据库表结构说明
-- 表之间的外键关系
-- 常用查询模式和示例
-- SQL最佳实践
-- 工作流程指导
-
-## 查询示例
-
-### 简单查询
-- "列出所有的艺术家"
-- "查询有多少个专辑"
-- "查询最贵的5首歌曲"
-
-### 聚合查询
-- "查询每个客户的消费总额，按消费金额降序排列，只显示前10名"
-- "统计每个流派的曲目数量"
-- "查询每个艺术家的专辑数量"
-
-### 多表查询
-- "查询艺术家及其专辑"
-- "查询专辑及其曲目数量"
-- "查询最流行的流派"
-
-### 复杂查询
-- "查询2023年的销售总额"
-- "查询消费最多的客户及其详细信息"
-- "查询每个国家的客户数量"
 
 ## 配置说明
 
