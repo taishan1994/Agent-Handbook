@@ -68,7 +68,7 @@ Agent学习笔记。
 
   - [如何自定义中间件](https://github.com/taishan1994/Agent-Handbook/blob/main/langchain_v1%2B/examples/%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6.md)
   - [使用langchain1.x+vllm+Qwen3-30B-A3B结合MCP构建一个自动搜索回答的智能体](https://github.com/taishan1994/Agent-Handbook/blob/main/langchain_v1%2B/examples/deepagents_with_mcp.md)
-
+  - [使用langchain1.x+Qwen3-30B-A3B构建一个自动写SQL的智能体](https://github.com/taishan1994/Agent-Handbook/tree/main/langchain_v1%2B/examples/codes/text2sql_agent/) 
 
 # 配套文章
 
