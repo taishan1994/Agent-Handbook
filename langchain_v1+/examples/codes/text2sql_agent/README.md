@@ -16,8 +16,6 @@ text2sql_agent/
 ├── test_agent.py         # 测试脚本
 ├── db_tools.py           # 数据库工具
 ├── skills/               # 技能目录
-│   └── sql-query/
-│       └── SKILL.md      # SQL查询技能
 └── data/
     └── chinook.db        # Chinook数据库
 ```
