@@ -70,6 +70,18 @@ Agent学习笔记。
   - [使用langchain1.x+vllm+Qwen3-30B-A3B结合MCP构建一个自动搜索回答的智能体](https://github.com/taishan1994/Agent-Handbook/blob/main/langchain_v1%2B/examples/deepagents_with_mcp.md)
   - [使用langchain1.x+Qwen3-30B-A3B构建一个自动写SQL的智能体](https://github.com/taishan1994/Agent-Handbook/tree/main/langchain_v1%2B/examples/codes/text2sql_agent/) 
 
+- openclaw：针对openclaw的架构拆解
+  - [总体架构分析](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-总体架构分析.md) - 深入分析OpenClaw的整体架构设计，包括Gateway网关层、Channels渠道层、Plugins插件层、Browser浏览器层、Media媒体层等核心模块的详细说明。
+  - [安全管理机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-安全管理机制.md) - 全面介绍OpenClaw的安全管理机制，包括安全审计工具、认证机制、访问控制、沙箱隔离、工具策略、环境变量安全等多层次安全防护体系。
+  - [智能体交互机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-智能体交互机制.md) - 详细讲解OpenClaw的智能体交互系统，包括子智能体生成、智能体间消息传递、通告机制、嵌套协作模式和线程绑定会话等功能。
+  - [技能加载与使用机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-技能加载与使用机制.md) - 介绍OpenClaw的技能系统，包括技能文件结构、元数据解析、技能发现与加载、技能使用机制和配置管理等核心功能。
+  - [智能体持续运行机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-智能体持续运行机制.md) - 阐述OpenClaw确保智能体持续运行的各种机制，包括心跳检测、自动回复、后台进程、消息监听、定时任务、连接保持和重连等。
+  - [使用MCP指南](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-使用MCP指南.md) - 完整的MCP（Model Context Protocol）使用指南，涵盖MCP服务器配置、会话管理、工具调用、权限管理、调试和性能优化等内容。
+  - [心跳机制详解](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-心跳机制.md) - 深入解析OpenClaw的心跳机制，包括心跳配置、HEARTBEAT.md检查清单、响应约定、可见性控制、活动时段控制和成本优化等核心功能。
+  - [反思和规划机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-反思和规划机制.md) - 介绍OpenClaw的多层次反思和规划机制，包括Thinking/Reasoning推理系统、Heartbeat定期检查、Memory记忆管理、Compaction上下文压缩和Cron定时任务等组件。
+  - [系统提示词加载机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-系统提示词加载.md) - 详细说明OpenClaw的System Prompt加载机制，包括提示模式、加载流程、Bootstrap文件机制、插件扩展、技能加载和记忆召回等核心内容。
+
+
 # 配套文章
 
 - [一份全面的Agent学习资料，看完了我不信你还不会](https://mp.weixin.qq.com/s/acJA87ciZqxXh07y5cf8Bg)
