@@ -60,7 +60,9 @@ Agent学习笔记。
   - [反思和规划机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-反思和规划机制.md) - 介绍OpenClaw的多层次反思和规划机制，包括Thinking/Reasoning推理系统、Heartbeat定期检查、Memory记忆管理、Compaction上下文压缩和Cron定时任务等组件。
   - [系统提示词加载机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-系统提示词加载.md) - 详细说明OpenClaw的System Prompt加载机制，包括提示模式、加载流程、Bootstrap文件机制、插件扩展、技能加载和记忆召回等核心内容。
 
-
+- skills：skills基础学习
+  - [技能基础介绍和使用](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skills%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.md)
+  
 # 配套文章
 
 - [一份全面的Agent学习资料，看完了我不信你还不会](https://mp.weixin.qq.com/s/acJA87ciZqxXh07y5cf8Bg)
