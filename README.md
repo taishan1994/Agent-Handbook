@@ -60,8 +60,14 @@ Agent学习笔记。
   - [反思和规划机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-反思和规划机制.md) - 介绍OpenClaw的多层次反思和规划机制，包括Thinking/Reasoning推理系统、Heartbeat定期检查、Memory记忆管理、Compaction上下文压缩和Cron定时任务等组件。
   - [系统提示词加载机制](https://github.com/taishan1994/Agent-Handbook/blob/main/openclaw/openclaw-系统提示词加载.md) - 详细说明OpenClaw的System Prompt加载机制，包括提示模式、加载流程、Bootstrap文件机制、插件扩展、技能加载和记忆召回等核心内容。
 
-- skills：skills基础学习
-  - [技能基础介绍和使用](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skills%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.md)
+- skills：skills基础学习与前沿研究
+  - [技能基础介绍和使用](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skills基本介绍和使用.md) - 全面介绍Skills系统的核心概念、设计原则、文件结构、编写技巧和最佳实践，帮助理解如何构建和使用可复用的Agent技能。
+  - [KernelSkill：GPU内核优化的多智能体框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/kernel_skill.md) - 介绍基于双层记忆架构的多智能体框架，通过协调具备长期记忆（可复用专家技能）和短期记忆（防止重复回溯）的智能体，实现高效的GPU内核优化。
+  - [EvoSkill：自动化技能发现框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/evol_skill.md) - 提出一种自我进化框架，通过迭代式的失败分析自动发现并优化智能体的技能。该框架在更高的"技能"抽象层级上进行操作，生成的技能具有结构化、可复用和可迁移的特点，显著提升多智能体系统能力。
+  - [AutoSkill：经验驱动的终身学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/auto_skill.md) - 介绍一种经验驱动的终身学习框架，使LLM代理能够从对话和交互痕迹中自动提取技能、持续维护技能库、动态重用技能，在不重新训练基础模型的情况下实现个性化能力的积累。
+  - [SCALAR：符号规划与强化学习的技能学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/scalar.md) - 提出一种创新框架，通过构建双向反馈闭环，将LLM的符号规划能力与强化学习的低层执行能力紧密结合，利用学到的技能库来实现复杂长程任务的自主学习和组合。
+  - [XSKILL：多模态智能体的持续学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/x_skill.md) - 介绍一种双流框架，通过从过去的执行轨迹中持续学习两种互补的可重用知识——经验和技能，使多模态智能体无需更新参数即可不断提升性能，解决工具使用效率低和编排灵活性差的问题。
+  - [Skill-Creator：构建智能体技能的元技能系统](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skill-creator-architecture.md) - 深度解析Skill-Creator的完整架构，包括三大核心智能体（Grader、Comparator、Analyzer）、工具脚本链、完整工作流程和关键设计模式，提供从技能创建、测试评估到持续优化的系统化方法论。
   
 # 配套文章
 
