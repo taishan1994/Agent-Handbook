@@ -62,6 +62,9 @@ Agent学习笔记。
 
 - skills：skills基础学习与前沿研究
   - [技能基础介绍和使用](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skills基本介绍和使用.md) - 全面介绍Skills系统的核心概念、设计原则、文件结构、编写技巧和最佳实践，帮助理解如何构建和使用可复用的Agent技能。
+  - [SoK：Agentic Skills——超越工具调用，重新定义LLM智能体的能力范式](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/agentic_skills.md) - 首次以智能体技能为核心视角，系统性梳理LLM智能体的能力封装、生命周期、设计范式与安全治理，为智能体从"临时规划"走向"持久技能化"提供完整理论框架。
+  - [Memento‑Skills：让AI智能体自己设计自己，无需微调也能持续进化](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/memento_skills.md) - 提出基于记忆强化学习的通用智能体系统，通过"读写反思学习"闭环，让智能体以可执行技能为外部记忆，自主设计、优化、迭代专属任务智能体，全程不更新底层LLM参数实现持续性能跃升。
+  - [SkillsBench：首次系统性评测Agent技能，揭开大模型外挂的真实效用](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skillbench.md) - 打造行业首个以技能为核心评估对象的基准测试平台，覆盖11大领域、84项真实任务，完成超7300次实验，量化揭示Agent技能的真实价值与边界。
   - [KernelSkill：GPU内核优化的多智能体框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/kernel_skill.md) - 介绍基于双层记忆架构的多智能体框架，通过协调具备长期记忆（可复用专家技能）和短期记忆（防止重复回溯）的智能体，实现高效的GPU内核优化。
   - [EvoSkill：自动化技能发现框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/evol_skill.md) - 提出一种自我进化框架，通过迭代式的失败分析自动发现并优化智能体的技能。该框架在更高的"技能"抽象层级上进行操作，生成的技能具有结构化、可复用和可迁移的特点，显著提升多智能体系统能力。
   - [AutoSkill：经验驱动的终身学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/auto_skill.md) - 介绍一种经验驱动的终身学习框架，使LLM代理能够从对话和交互痕迹中自动提取技能、持续维护技能库、动态重用技能，在不重新训练基础模型的情况下实现个性化能力的积累。
