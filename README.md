@@ -71,9 +71,12 @@ Agent学习笔记。
   - [SCALAR：符号规划与强化学习的技能学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/scalar.md) - 提出一种创新框架，通过构建双向反馈闭环，将LLM的符号规划能力与强化学习的低层执行能力紧密结合，利用学到的技能库来实现复杂长程任务的自主学习和组合。
   - [XSKILL：多模态智能体的持续学习框架](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/x_skill.md) - 介绍一种双流框架，通过从过去的执行轨迹中持续学习两种互补的可重用知识——经验和技能，使多模态智能体无需更新参数即可不断提升性能，解决工具使用效率低和编排灵活性差的问题。
   - [Skill-Creator：构建智能体技能的元技能系统](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skill-creator-architecture.md) - 深度解析Skill-Creator的完整架构，包括三大核心智能体（Grader、Comparator、Analyzer）、工具脚本链、完整工作流程和关键设计模式，提供从技能创建、测试评估到持续优化的系统化方法论。
+  - [SkillRouter：大规模LLM智能体技能路由的新范式](https://github.com/taishan1994/Agent-Handbook/blob/main/skills/skill_router.md) - 提出两阶段"检索-重排序"流水线，通过实证研究揭示技能实现代码(Body)才是决定性信号，在8万技能池中实现74.0%的Top-1路由准确率，为大规模技能路由提供高效、紧凑的解决方案。
 
 - agent-papers：智能体相关论文深度解析
   - [ProRL Agent：Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/ProRL-Agents.md) - 提出一种名为ProRL Agent的新型基础设施，通过"轨迹生成即服务"(RaaS)的设计理念，将多轮LLM智能体的轨迹生成从RL训练器中完全解耦，解决I/O密集型轨迹生成与GPU密集型策略训练之间的系统需求冲突，显著提升训练效率、系统可维护性和可移植性。
+  - [自进化智能体综述：迈向ASI的关键一步](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/Self-Evolving-Agents.md) - 该领域首篇系统性综述，围绕"进化什么、何时进化、如何进化、在哪里进化"四个维度构建自进化智能体的分类体系，为从静态模型到动态进化的智能体研究提供统一理论框架和路线图，最终指向人工超级智能(ASI)的实现。
+  - [Claude Code 源码深度架构分析](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/Claude Code 源码深度架构分析.pdf)
   
 # 配套文章
 
