@@ -76,7 +76,7 @@ Agent学习笔记。
 - agent-papers：智能体相关论文深度解析
   - [ProRL Agent：Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/ProRL-Agents.md) - 提出一种名为ProRL Agent的新型基础设施，通过"轨迹生成即服务"(RaaS)的设计理念，将多轮LLM智能体的轨迹生成从RL训练器中完全解耦，解决I/O密集型轨迹生成与GPU密集型策略训练之间的系统需求冲突，显著提升训练效率、系统可维护性和可移植性。
   - [自进化智能体综述：迈向ASI的关键一步](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/Self-Evolving-Agents.md) - 该领域首篇系统性综述，围绕"进化什么、何时进化、如何进化、在哪里进化"四个维度构建自进化智能体的分类体系，为从静态模型到动态进化的智能体研究提供统一理论框架和路线图，最终指向人工超级智能(ASI)的实现。
-  - [Claude Code 源码深度架构分析](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/Claude Code 源码深度架构分析.pdf)
+  - [Claude Code 源码深度架构分析](https://github.com/taishan1994/Agent-Handbook/blob/main/agent-papers/Claude%20Code%20%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90.pdf)
   
 # 配套文章
 
