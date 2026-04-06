@@ -1,3 +1,8 @@
+
+AutoHarness: improving LLM agents by automatically synthesizing a code harness
+
+https://arxiv.org/pdf/2603.03329
+
 这是一篇关于**利用大语言模型（LLM）自动生成代码“套件”以提升智能体性能**的深度解读。
 
 这篇论文题为**《AutoHarness: improving LLM agents by automatically synthesizing a code harness》**（AutoHarness：通过自动合成代码套件来提升 LLM 智能体），由 **Google DeepMind** 的研究团队（Xinghua Lou 等人）于 2026 年发表。
